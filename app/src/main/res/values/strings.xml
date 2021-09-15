@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">History Quiz</string>
+    <string name="hint_search">Search</string>
+    <string name="by_me"><![CDATA[Designed & Developed By: Omar Farouk ZOUAK]]></string>
+    <string name="tap_date">Tap to pick a date:</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="done">Done</string>
+    <string name="ww1">World Word I</string>
+    <string name="start">Start</string>
+    <string name="ww2">World Word II</string>
+</resources>

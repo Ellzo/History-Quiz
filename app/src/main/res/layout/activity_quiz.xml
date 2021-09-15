@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/primaryColor"
+        android:gravity="center"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQ1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/_1"
+        android:textColor="@color/accentColor"
+        app:layout_constraintEnd_toStartOf="@id/tvQ2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvQ2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorDark"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/_2"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintEnd_toStartOf="@id/tvQ3"
+        app:layout_constraintStart_toEndOf="@id/tvQ1"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvQ3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorDark"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/_3"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintEnd_toStartOf="@id/tvQ4"
+        app:layout_constraintStart_toEndOf="@id/tvQ2"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvQ4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorDark"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/_4"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintEnd_toStartOf="@id/tvQ5"
+        app:layout_constraintStart_toEndOf="@id/tvQ3"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+    <TextView
+        android:id="@+id/tvQ5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColorDark"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="@string/_5"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvQ4"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/tap_date"
+        android:textColor="@color/primaryColorDark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/tvDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/bg_date"
+        android:paddingHorizontal="36dp"
+        android:paddingVertical="20dp"
+        android:textColor="@color/secondaryColor"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQ1" />
+
+    <ImageView
+        android:id="@+id/btnDone"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_done"
+        android:padding="16dp"
+        android:src="@drawable/ic_baseline_done_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        android:contentDescription="@string/done" />
+</androidx.constraintlayout.widget.ConstraintLayout>

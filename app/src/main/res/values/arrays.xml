@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ww1_questions">
+        <item>When was "Archduke Francis Ferdinand" assassinated?</item>
+        <item>When did Austria-Hungary declare war on Serbia?</item>
+        <item>When did Arab nationalists revolt against Ottoman rule?</item>
+        <item>When did United States declare war on Germany?</item>
+        <item>When did Germany sign the armistice?</item>
+    </string-array>
+
+    <string-array name="ww1_answers">
+        <item>06/28/1914</item>
+        <item>07/28/1914</item>
+        <item>06/05/1916</item>
+        <item>04/06/1917</item>
+        <item>11/11/1918</item>
+    </string-array>
+</resources>

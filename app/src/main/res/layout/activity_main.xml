@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/app_name"
+            android:textColor="@color/primaryColor"
+            android:textSize="37sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints="name"
+            android:background="@drawable/bg_search"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:hint="@string/hint_search"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/primaryColor"
+            android:textColorHighlight="@color/primaryColor"
+            android:textColorHint="@color/primaryColorDark"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName" />
+
+        <ImageView
+            android:id="@+id/imgWW1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/ww1"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ww1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_search" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_img"
+            app:layout_constraintBottom_toBottomOf="@id/imgWW1"
+            app:layout_constraintEnd_toEndOf="@id/imgWW1"
+            app:layout_constraintStart_toStartOf="@id/imgWW1"
+            app:layout_constraintTop_toTopOf="@id/imgWW1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/ww1"
+            android:textColor="@color/primaryColor"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="@id/imgWW1"
+            app:layout_constraintTop_toTopOf="@id/imgWW1" />
+
+        <ImageView
+            android:id="@+id/btnWw1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle"
+            android:contentDescription="@string/start"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="@id/imgWW1"
+            app:layout_constraintEnd_toEndOf="@id/imgWW1"
+            app:layout_constraintTop_toBottomOf="@id/imgWW1" />
+
+        <ImageView
+            android:id="@+id/imgWW2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/ww2"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ww2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnWw1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_img"
+            app:layout_constraintBottom_toBottomOf="@id/imgWW2"
+            app:layout_constraintEnd_toEndOf="@id/imgWW2"
+            app:layout_constraintStart_toStartOf="@id/imgWW2"
+            app:layout_constraintTop_toTopOf="@id/imgWW2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/ww2"
+            android:textColor="@color/primaryColor"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="@id/imgWW2"
+            app:layout_constraintTop_toTopOf="@id/imgWW2" />
+
+        <ImageView
+            android:id="@+id/btnWw2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/circle"
+            android:contentDescription="@string/start"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="@id/imgWW2"
+            app:layout_constraintEnd_toEndOf="@id/imgWW2"
+            app:layout_constraintTop_toBottomOf="@id/imgWW2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/by_me"
+            android:textColor="@color/primaryColorDark"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnWw2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
