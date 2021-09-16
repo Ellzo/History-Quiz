@@ -15,4 +15,20 @@
         <item>04/06/1917</item>
         <item>11/11/1918</item>
     </string-array>
+
+    <string-array name="ww2_questions">
+        <item>When did Japan invade China?</item>
+        <item>When was World War II initiated in Europe?</item>
+        <item>When did United States enter World War II?</item>
+        <item>When did  German armed forces surrender unconditionally to the Allies?</item>
+        <item>When did United States drop an atomic bomb on Hiroshima?</item>
+    </string-array>
+
+    <string-array name="ww2_answers">
+        <item>07/07/1937</item>
+        <item>09/01/1939</item>
+        <item>12/08/1941</item>
+        <item>05/07/1945</item>
+        <item>08/06/1945</item>
+    </string-array>
 </resources>

@@ -115,11 +115,11 @@
         android:layout_height="92dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_done"
+        android:contentDescription="@string/done"
         android:padding="16dp"
         android:src="@drawable/ic_baseline_done_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDate"
-        android:contentDescription="@string/done" />
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>

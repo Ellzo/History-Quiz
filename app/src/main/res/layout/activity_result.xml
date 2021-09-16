@@ -4,6 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
     tools:context=".ResultActivity">
+
+    <ImageView
+        android:id="@+id/imgScore"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/your_score"
+        android:src="@drawable/score_paper"
+        app:layout_constraintBottom_toTopOf="@id/btnHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/your_score"
+        android:textColor="@color/primaryColorDark"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@id/tvScore"
+        app:layout_constraintEnd_toEndOf="@id/tvScore"
+        app:layout_constraintStart_toStartOf="@id/tvScore" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryColorDark"
+        android:textSize="62sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgScore"
+        app:layout_constraintEnd_toEndOf="@id/imgScore"
+        app:layout_constraintStart_toStartOf="@id/imgScore"
+        app:layout_constraintTop_toTopOf="@id/imgScore" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_date"
+        android:paddingVertical="12dp"
+        android:text="@string/home"
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btnAgain" />
+
+    <Button
+        android:id="@+id/btnAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_date"
+        android:paddingVertical="12dp"
+        android:text="@string/play_again"
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btnShare" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_date"
+        android:paddingVertical="12dp"
+        android:text="@string/share"
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,6 @@ class DatePickerFragment(private val day: Int, private val month: Int, private v
     OnDateSetListener {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
-        // Create a new instance of DatePickerDialog and return it.
         return DatePickerDialog(requireActivity(), this, year, month, day)
     }
 

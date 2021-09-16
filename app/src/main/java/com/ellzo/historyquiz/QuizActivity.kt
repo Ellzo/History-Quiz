@@ -1,17 +1,20 @@
 package com.ellzo.historyquiz
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.ellzo.historyquiz.databinding.ActivityQuizBinding
 import java.util.*
+import kotlin.properties.Delegates
 
 class QuizActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuizBinding
+    private var ww by Delegates.notNull<Int>()
     private val c = Calendar.getInstance()
     private var current = 0
+    private var correctCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +22,16 @@ class QuizActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.tvQuestion.text = resources.getStringArray(R.array.ww1_questions)[current]
+        ww = intent.getIntExtra(WAR_KEY, -1)
+        when (ww) {
+            WW1 -> {
+                binding.tvQuestion.text = resources.getStringArray(R.array.ww1_questions)[current]
+            }
+
+            WW2 -> {
+                binding.tvQuestion.text = resources.getStringArray(R.array.ww2_questions)[current]
+            }
+        }
 
         setTvDate()
 
@@ -35,26 +47,23 @@ class QuizActivity : AppCompatActivity() {
         binding.btnDone.setOnClickListener {
             showDialog()
         }
-        /*val ww = intent.getIntExtra(WAR_KEY, -1)
-        when (ww) {
-            WW1 -> {
-                tv.text = "WW1"
-            }
-
-            WW2 -> {
-                tv.text = "WW2"
-            }
-        }*/
     }
 
     private fun showDialog() {
         val isCorrect =
-            binding.tvDate.text.toString() == resources.getStringArray(R.array.ww1_answers)[current]
+            when (ww) {
+                WW1 -> binding.tvDate.text.toString() == resources.getStringArray(R.array.ww1_answers)[current]
+                WW2 -> binding.tvDate.text.toString() == resources.getStringArray(R.array.ww2_answers)[current]
+                else -> false
+            }
 
         val result =
             if (isCorrect)
                 resources.getString(R.string.correct)
             else getString(R.string.wrong)
+
+        if (isCorrect)
+            correctCount++
 
         AlertDialog.Builder(this@QuizActivity).apply {
             setTitle(result)
@@ -82,7 +91,11 @@ class QuizActivity : AppCompatActivity() {
 
     private fun nextQuestion(isCorrect: Boolean) {
         if (current == 4) {
-            Toast.makeText(applicationContext, "Not Yet Hahahaha", Toast.LENGTH_LONG).show()
+            val intent = Intent(this@QuizActivity, ResultActivity::class.java)
+            intent.putExtra(WAR_KEY, ww)
+            intent.putExtra(RES_KEY, correctCount)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         } else {
             when (current) {
                 0 -> {
@@ -170,7 +183,19 @@ class QuizActivity : AppCompatActivity() {
                     )
                 }
             }
-            binding.tvQuestion.text = resources.getStringArray(R.array.ww1_questions)[++current]
+
+            when (ww) {
+                WW1 -> {
+                    binding.tvQuestion.text =
+                        resources.getStringArray(R.array.ww1_questions)[++current]
+                }
+
+                WW2 -> {
+                    binding.tvQuestion.text =
+                        resources.getStringArray(R.array.ww2_questions)[++current]
+                }
+            }
+
             setTvDate()
         }
 
@@ -179,6 +204,7 @@ class QuizActivity : AppCompatActivity() {
 
     companion object {
         const val WAR_KEY = "com.ellzo.historyquiz.whichwarforquiz"
+        const val RES_KEY = "com.ellzo.historyquiz.howmuchdidget"
         const val WW1 = 47
         const val WW2 = 89
     }
